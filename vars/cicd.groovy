@@ -1,12 +1,12 @@
-def git(repo){
+def gitv(repo){
   git 'https://github.com/intelliqittrainings/${repo}'
 }
-def maven(){
+def mavenv(){
   sh 'mvn package'
 }
-def deploy(workspace,ip,contextpath){
-  sh 'scp /var/lib/jenkins/workspace/{workspace}/webapp/target/webapp.war ubuntu@{ip}:/var/lib/tomcat9/webapps/{contextpath}.war'
+def deployv(workspace,ip,contextpath){
+  sh 'scp /var/lib/jenkins/workspace/${workspace}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${contextpath}.war'
 }
-def test(workspace){
-  sh 'java -jar /var/lib/jenkins/workspace/{workspace}/testing.jar'
+def testv(workspace){
+  sh 'java -jar /var/lib/jenkins/workspace/${workspace}/testing.jar'
 }
