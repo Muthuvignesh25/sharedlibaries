@@ -1,5 +1,5 @@
 def gitv(repo){
-  git "https://github.com/intelliqittrainings/${repo}"
+  git "https://github.com/Muthuvignesh25/${repo}"
 }
 def mavenv(){
   sh "mvn package"
